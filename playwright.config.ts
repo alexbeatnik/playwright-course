@@ -1,6 +1,5 @@
-import { PlaywrightTestConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
-const config: PlaywrightTestConfig = {
-    testMatch: /.*.ts/,
-};
-export default config;
+module.exports = defineConfig({
+    reporter: [['json', { outputFile: 'results.json' }]],
+});
