@@ -1,5 +1,32 @@
-import { defineConfig } from '@playwright/test';
+import { PlaywrightTestConfig } from '@playwright/test';
 
-module.exports = defineConfig({
-    reporter: [['json', { outputFile: 'results.json' }]],
-});
+const config: PlaywrightTestConfig = {
+    timeout: 5000,
+    retries: 2,
+    use: {
+        headless: false,
+        viewport: {
+            width: 1280,
+            height: 720,
+        },
+        actionTimeout: 15000,
+        ignoreHTTPSErrors: true,
+        video: 'off',
+        screenshot: 'off',
+    },
+    projects: [
+        {
+            name: 'Chromium',
+            use: { browserName: 'chromium' },
+        },
+        {
+            name: 'Firefox',
+            use: { browserName: 'firefox' },
+        },
+        {
+            name: 'Webkit',
+            use: { browserName: 'webkit' },
+        },
+    ],
+};
+export default config;
