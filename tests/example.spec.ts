@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { loadHomePage, assertTitle } from '../helpers';
 
 test.skip('Example', async ({ page }) => {
     await page.goto('https://example.com/');
@@ -42,7 +43,7 @@ test.describe('First test suite', () => {
     });
 });
 
-test.describe.only('Hooks', () => {
+test.describe('Hooks', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('https://example.com/');
         await expect(page).toHaveURL('https://example.com');
@@ -56,4 +57,9 @@ test.describe.only('Hooks', () => {
         const element = await page.locator('h1');
         await element.screenshot({ path: 'singleScreenshot.png' });
     });
+});
+
+test('Custom Helpers', async ({ page }) => {
+    await loadHomePage(page);
+    await assertTitle(page);
 });
