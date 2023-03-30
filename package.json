@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:chrome": "playwright test  --config=playwright.config.ts --project=Chrome",
+    "test:webkit": "playwright test  --config=playwright.config.ts --project=Webkit",
+    "test": "npx playwright test  --config=playwright.config.ts --project=Firefox"
   },
   "repository": {
     "type": "git",
