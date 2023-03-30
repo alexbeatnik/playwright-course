@@ -41,3 +41,17 @@ test.describe('First test suite', () => {
         await expect(nonExistentElement).not.toBeVisible();
     });
 });
+
+test('Screenshots', async ({ page }) => {
+    await page.goto('https://example.com/');
+    await expect(page).toHaveURL('https://example.com');
+    await page.screenshot({ path: 'screenshot.png', fullPage: true });
+});
+
+test('Screenshot single element', async ({ page }) => {
+    await page.goto('https://example.com/');
+    await expect(page).toHaveURL('https://example.com');
+    const element = await page.locator('h1');
+    await element.screenshot({ path: 'singleScreenshot.png' });
+    await page.screenshot({ path: 'screenshot.png', fullPage: true });
+});
