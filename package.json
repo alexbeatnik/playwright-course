@@ -6,7 +6,8 @@
   "scripts": {
     "test:chrome": "playwright test  --config=playwright.config.ts --project=Chrome",
     "test:webkit": "playwright test  --config=playwright.config.ts --project=Webkit",
-    "test": "npx playwright test  --config=playwright.config.ts --project=Firefox"
+    "test": "npx playwright test  --config=playwright.config.ts --project=Firefox",
+    "tests": "npx playwright test  --config=e2e.config.ts --project=Firefox"
   },
   "repository": {
     "type": "git",
