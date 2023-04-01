@@ -21,11 +21,15 @@ test.describe('Login/Logout flow', () => {
         await page.type('#user_login', 'username');
         await page.type('#user_password', 'password');
         await page.click('text=Sign in');
-        await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html');
+        await page.goto(
+            'http://zero.webappsecurity.com/bank/transfer-funds.html'
+        );
 
         const accountSummaryTab = await page.locator('#account_summary_tab');
         await expect(accountSummaryTab).toBeVisible();
         await page.goto('http://zero.webappsecurity.com/logout.html');
-        await expect(page).toHaveURL('http://zero.webappsecurity.com/index.html');
+        await expect(page).toHaveURL(
+            'http://zero.webappsecurity.com/index.html'
+        );
     });
 });

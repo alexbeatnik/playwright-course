@@ -1,26 +1,26 @@
 {
-  "name": "playwright-course",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test:chrome": "playwright test  --config=playwright.config.ts --project=Chrome",
-    "test:webkit": "playwright test  --config=playwright.config.ts --project=Webkit",
-    "test": "npx playwright test  --config=playwright.config.ts --project=Firefox",
-    "tests": "npx playwright test  --config=e2e.config.ts --project=Firefox"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexbeatnik/playwright-course.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexbeatnik/playwright-course/issues"
-  },
-  "homepage": "https://github.com/alexbeatnik/playwright-course#readme",
-  "dependencies": {
-    "@playwright/test": "^1.31.2",
-    "prettier": "^2.8.4"
-  }
+    "name": "playwright-course",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test:chrome": "playwright test  --config=playwright.config.ts --project=Chrome",
+        "test:webkit": "playwright test  --config=playwright.config.ts --project=Webkit",
+        "test": "npx playwright test  --config=playwright.config.ts --project=Firefox",
+        "tests": "npx playwright test  --config=e2e.config.ts --project=Firefox"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexbeatnik/playwright-course.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alexbeatnik/playwright-course/issues"
+    },
+    "homepage": "https://github.com/alexbeatnik/playwright-course#readme",
+    "dependencies": {
+        "@playwright/test": "^1.31.2",
+        "prettier": "^2.8.4"
+    }
 }
